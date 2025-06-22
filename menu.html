@@ -1,37 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Waldorf</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #1a1a1a; color: #fff; margin: 0; padding: 0; }
-        .menu { max-width: 900px; margin: 20px auto; padding: 20px; }
-        .menu-header { text-align: center; color: #d4af37; }
-        .menu-section { margin: 20px 0; }
-        .menu-item { display: flex; align-items: center; border-bottom: 1px solid #333; padding: 10px 0; }
-        .menu-item img { width: 50px; height: 50px; margin-right: 15px; border-radius: 5px; }
-        .menu-item h3 { margin: 0; color: #fff; }
-        .menu-item p { margin: 5px 0; color: #ccc; }
-        .menu-item span { color: #d4af37; font-weight: bold; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .menu-container {
+            width: 100%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .menu-item img {
+            width: 15%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .menu-item .details {
+            flex-grow: 1;
+            margin-left: 15px;
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .menu-item p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .menu-item .price {
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
-    <div class="menu">
-        <div class="menu-header">
-            <h1>Menú Waldorf</h1>
-            <p>Comida italiana hecha con amor.</p>
-        </div>
-        <div class="menu-section">
-            <h2>Aperitivos</h2>
-            <div class="menu-item">
-                <img src="https://tinyurl.com/2p8xj9nt" alt="Bruschetta">
-                <div>
-                    <h3>Bruschetta</h3>
-                    <p>Pan con tomate y albahaca.</p>
-                    <span>$60</span>
-                </div>
+    <div class="menu-container">
+        <h1>Menú Waldorf</h1>
+        <div class="menu-item">
+            <img src="https://via.placeholder.com/60" alt="Bruschetta">
+            <div class="details">
+                <h3>Bruschetta</h3>
+                <p>Pan con tomate y albahaca.</p>
             </div>
+            <span class="price">$60</span>
         </div>
     </div>
 </body>
