@@ -4,66 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Waldorf</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-            text-align: center;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="https://haimrd.github.io/restaurante/estilo.css">
+    <script>
+        // Verifica que el HTML solo sea accesible desde Fowst
+        document.addEventListener("DOMContentLoaded", function () {
+            const allowedDomain = "www.fowst.online"; // Dominio permitido
 
-        .menu-container {
-            width: 90%;
-            max-width: 600px;
-            margin: 20px auto;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        h1 {
-            color: #d4af37;
-            margin-bottom: 20px;
-        }
-
-        .menu-item {
-            margin-bottom: 15px;
-            border-bottom: 1px solid #eaeaea;
-            padding-bottom: 10px;
-        }
-
-        .menu-item h3 {
-            margin: 0;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .menu-item p {
-            margin: 5px 0;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .menu-item .price {
-            color: #d4af37;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        @media (max-width: 768px) {
-            .menu-container {
-                padding: 15px;
+            if (document.referrer.indexOf(allowedDomain) === -1) {
+                document.body.innerHTML = "<h1>Acceso Restringido</h1><p>Este contenido no puede ser cargado desde este dominio.</p>";
+                document.body.style.textAlign = "center";
+                document.body.style.marginTop = "20%";
+                document.body.style.color = "red";
+                throw new Error("Acceso denegado: dominio no autorizado.");
             }
-
-            h1 {
-                font-size: 24px;
-            }
-        }
-    </style>
+        });
+    </script>
 </head>
 <body>
     <div class="menu-container">
@@ -72,6 +27,16 @@
             <h3>Bruschetta</h3>
             <p>Pan con tomate y albahaca.</p>
             <p class="price">$60</p>
+        </div>
+        <div class="menu-item">
+            <h3>Pizza Margarita</h3>
+            <p>Pizza clásica con queso mozzarella y albahaca.</p>
+            <p class="price">$120</p>
+        </div>
+        <div class="menu-item">
+            <h3>Pasta Alfredo</h3>
+            <p>Pasta con salsa cremosa de queso parmesano.</p>
+            <p class="price">$90</p>
         </div>
     </div>
 </body>
